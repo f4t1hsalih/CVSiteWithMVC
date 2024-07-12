@@ -9,15 +9,25 @@ namespace CVSiteWithMVC.Controllers
         // GET: Default
         public ActionResult Index()
         {
+            return View();
+        }
+
+        public PartialViewResult About()
+        {
             using (CVSiteWithMVCEntities db = new CVSiteWithMVCEntities())
             {
-                var values = db.tbl_about.ToList();
-                return View(values);
+                var about = db.tbl_about.ToList();
+                return PartialView("About", about);
             }
         }
+
         public PartialViewResult Experience()
         {
-            return PartialView();
+            using (CVSiteWithMVCEntities db = new CVSiteWithMVCEntities())
+            {
+                var experience = db.tbl_experience.ToList();
+                return PartialView("Experience", experience);
+            }
         }
     }
 }

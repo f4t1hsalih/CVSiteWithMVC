@@ -1712,6 +1712,7 @@
     <Content Include="Template\vendor\jquery\jquery.min.map" />
     <Content Include="Template\vendor\jquery\jquery.slim.min.map" />
     <Content Include="Views\Default\Experience.cshtml" />
+    <Content Include="Views\Default\About.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
