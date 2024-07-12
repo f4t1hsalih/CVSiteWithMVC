@@ -61,12 +61,24 @@ namespace CVSiteWithMVC.Controllers
                 return PartialView("Award", award);
             }
         }
+        [HttpGet]
         public PartialViewResult Communication()
         {
             using (CVSiteWithMVCEntities db = new CVSiteWithMVCEntities())
             {
                 var communication = db.tbl_communication.ToList();
                 return PartialView("Communication", communication);
+            }
+        }
+        [HttpPost]
+        public PartialViewResult Communication(tbl_communication com)
+        {
+            using (CVSiteWithMVCEntities db = new CVSiteWithMVCEntities())
+            {
+                com.cmt_date = System.DateTime.Today;
+                db.tbl_communication.Add(com);
+                db.SaveChanges();
+                return PartialView();
             }
         }
     }
