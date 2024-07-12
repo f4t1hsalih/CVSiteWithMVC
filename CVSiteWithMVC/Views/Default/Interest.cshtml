@@ -1,9 +1,16 @@
 ﻿@model List<CVSiteWithMVC.Models.Entity.tbl_interest>
 
-<div class="my-auto">
-    <h2 class="mb-5">İLGİ ALANLARIM</h2>
-    @foreach (var item in Model)
-    {
-        <p class="mb-0">@item.int_interest</p>
-    }
-</div>
+@if (Model != null)
+{
+    <div class="my-auto">
+        <h2 class="mb-5">İLGİ ALANLARIM</h2>
+        @foreach (var item in Model)
+        {
+            <p class="mb-0">@item.int_interest</p>
+        }
+    </div>
+}
+else
+{
+    <p>Model is null</p>
+}

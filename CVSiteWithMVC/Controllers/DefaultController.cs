@@ -53,5 +53,13 @@ namespace CVSiteWithMVC.Controllers
                 return PartialView("Interest", interest);
             }
         }
+        public PartialViewResult Award()
+        {
+            using (CVSiteWithMVCEntities db = new CVSiteWithMVCEntities())
+            {
+                var award = db.tbl_award.ToList();
+                return PartialView("Award", award);
+            }
+        }
     }
 }

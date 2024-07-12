@@ -1,0 +1,22 @@
+﻿@model List<CVSiteWithMVC.Models.Entity.tbl_award>
+
+@if (Model != null)
+{
+    <div class="my-auto">
+        <h2 class="mb-5">ÖDÜLLER &amp; SERTİFİKALAR</h2>
+        <ul class="fa-ul mb-0">
+            @foreach (var item in Model)
+            {
+                <li>
+                    <i class="fa-li fa fa-trophy text-warning"></i>
+                    @item.awd_award
+                </li>
+            }
+
+        </ul>
+    </div>
+}
+else
+{
+    <p>Model is null</p>
+}
