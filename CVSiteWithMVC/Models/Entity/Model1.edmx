@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="CVSiteWithAspModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tbl_about">
+          <Key>
+            <PropertyRef Name="abt_id" />
+          </Key>
+          <Property Name="abt_id" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="abt_name" Type="varchar" MaxLength="30" />
+          <Property Name="abt_surname" Type="varchar" MaxLength="30" />
+          <Property Name="abt_address" Type="varchar" MaxLength="150" />
+          <Property Name="abt_mail" Type="varchar" MaxLength="50" />
+          <Property Name="abt_tel" Type="varchar" MaxLength="20" />
+          <Property Name="abt_note" Type="varchar" MaxLength="1000" />
+          <Property Name="abt_photo" Type="varchar" MaxLength="100" />
+          <Property Name="abt_linkedin" Type="varchar" MaxLength="100" />
+          <Property Name="abt_github" Type="varchar" MaxLength="100" />
+          <Property Name="abt_twitter" Type="varchar" MaxLength="100" />
+          <Property Name="abt_instagram" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="tbl_admin">
+          <Key>
+            <PropertyRef Name="adm_id" />
+          </Key>
+          <Property Name="adm_id" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="adm_username" Type="varchar" MaxLength="30" />
+          <Property Name="adm_password" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="tbl_award">
+          <Key>
+            <PropertyRef Name="awd_id" />
+          </Key>
+          <Property Name="awd_id" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="awd_award" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="tbl_communication">
+          <Key>
+            <PropertyRef Name="cmt_id" />
+          </Key>
+          <Property Name="cmt_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="cmt_nameSurname" Type="varchar" MaxLength="100" />
+          <Property Name="cmt_email" Type="varchar" MaxLength="50" />
+          <Property Name="cmt_subject" Type="varchar" MaxLength="100" />
+          <Property Name="cmt_message" Type="varchar" MaxLength="1000" />
+          <Property Name="cmt_date" Type="date" />
+        </EntityType>
+        <EntityType Name="tbl_education">
+          <Key>
+            <PropertyRef Name="edc_id" />
+          </Key>
+          <Property Name="edc_id" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="edc_title" Type="varchar" MaxLength="50" />
+          <Property Name="edc_subtitle" Type="varchar" MaxLength="300" />
+          <Property Name="edc_description" Type="varchar" MaxLength="300" />
+          <Property Name="edc_note" Type="varchar" MaxLength="10" />
+          <Property Name="edc_date" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbl_experience">
+          <Key>
+            <PropertyRef Name="exp_id" />
+          </Key>
+          <Property Name="exp_id" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="exp_title" Type="varchar" MaxLength="50" />
+          <Property Name="exp_subtitle" Type="varchar" MaxLength="50" />
+          <Property Name="exp_description" Type="varchar" MaxLength="1000" />
+          <Property Name="exp_date" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbl_interest">
+          <Key>
+            <PropertyRef Name="int_id" />
+          </Key>
+          <Property Name="int_id" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="int_interest" Type="varchar" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="tbl_skills">
+          <Key>
+            <PropertyRef Name="skl_id" />
+          </Key>
+          <Property Name="skl_id" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="skl_skills" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="CVSiteWithAspModelStoreContainer">
+          <EntitySet Name="tbl_about" EntityType="Self.tbl_about" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_admin" EntityType="Self.tbl_admin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_award" EntityType="Self.tbl_award" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_communication" EntityType="Self.tbl_communication" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_education" EntityType="Self.tbl_education" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_experience" EntityType="Self.tbl_experience" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_interest" EntityType="Self.tbl_interest" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_skills" EntityType="Self.tbl_skills" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CVSiteWithAspModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tbl_about">
+          <Key>
+            <PropertyRef Name="abt_id" />
+          </Key>
+          <Property Name="abt_id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="abt_name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="abt_surname" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="abt_address" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="abt_mail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="abt_tel" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="abt_note" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="abt_photo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="abt_linkedin" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="abt_github" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="abt_twitter" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="abt_instagram" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tbl_admin">
+          <Key>
+            <PropertyRef Name="adm_id" />
+          </Key>
+          <Property Name="adm_id" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="adm_username" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="adm_password" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tbl_award">
+          <Key>
+            <PropertyRef Name="awd_id" />
+          </Key>
+          <Property Name="awd_id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="awd_award" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tbl_communication">
+          <Key>
+            <PropertyRef Name="cmt_id" />
+          </Key>
+          <Property Name="cmt_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="cmt_nameSurname" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="cmt_email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="cmt_subject" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="cmt_message" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="cmt_date" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="tbl_education">
+          <Key>
+            <PropertyRef Name="edc_id" />
+          </Key>
+          <Property Name="edc_id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="edc_title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="edc_subtitle" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="edc_description" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="edc_note" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="edc_date" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tbl_experience">
+          <Key>
+            <PropertyRef Name="exp_id" />
+          </Key>
+          <Property Name="exp_id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="exp_title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="exp_subtitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="exp_description" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="exp_date" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tbl_interest">
+          <Key>
+            <PropertyRef Name="int_id" />
+          </Key>
+          <Property Name="int_id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="int_interest" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tbl_skills">
+          <Key>
+            <PropertyRef Name="skl_id" />
+          </Key>
+          <Property Name="skl_id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="skl_skills" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="CVSiteWithMVCEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tbl_about" EntityType="Self.tbl_about" />
+          <EntitySet Name="tbl_admin" EntityType="Self.tbl_admin" />
+          <EntitySet Name="tbl_award" EntityType="Self.tbl_award" />
+          <EntitySet Name="tbl_communication" EntityType="Self.tbl_communication" />
+          <EntitySet Name="tbl_education" EntityType="Self.tbl_education" />
+          <EntitySet Name="tbl_experience" EntityType="Self.tbl_experience" />
+          <EntitySet Name="tbl_interest" EntityType="Self.tbl_interest" />
+          <EntitySet Name="tbl_skills" EntityType="Self.tbl_skills" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CVSiteWithAspModelStoreContainer" CdmEntityContainer="CVSiteWithMVCEntities">
+          <EntitySetMapping Name="tbl_about">
+            <EntityTypeMapping TypeName="CVSiteWithAspModel.tbl_about">
+              <MappingFragment StoreEntitySet="tbl_about">
+                <ScalarProperty Name="abt_id" ColumnName="abt_id" />
+                <ScalarProperty Name="abt_name" ColumnName="abt_name" />
+                <ScalarProperty Name="abt_surname" ColumnName="abt_surname" />
+                <ScalarProperty Name="abt_address" ColumnName="abt_address" />
+                <ScalarProperty Name="abt_mail" ColumnName="abt_mail" />
+                <ScalarProperty Name="abt_tel" ColumnName="abt_tel" />
+                <ScalarProperty Name="abt_note" ColumnName="abt_note" />
+                <ScalarProperty Name="abt_photo" ColumnName="abt_photo" />
+                <ScalarProperty Name="abt_linkedin" ColumnName="abt_linkedin" />
+                <ScalarProperty Name="abt_github" ColumnName="abt_github" />
+                <ScalarProperty Name="abt_twitter" ColumnName="abt_twitter" />
+                <ScalarProperty Name="abt_instagram" ColumnName="abt_instagram" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_admin">
+            <EntityTypeMapping TypeName="CVSiteWithAspModel.tbl_admin">
+              <MappingFragment StoreEntitySet="tbl_admin">
+                <ScalarProperty Name="adm_id" ColumnName="adm_id" />
+                <ScalarProperty Name="adm_username" ColumnName="adm_username" />
+                <ScalarProperty Name="adm_password" ColumnName="adm_password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_award">
+            <EntityTypeMapping TypeName="CVSiteWithAspModel.tbl_award">
+              <MappingFragment StoreEntitySet="tbl_award">
+                <ScalarProperty Name="awd_id" ColumnName="awd_id" />
+                <ScalarProperty Name="awd_award" ColumnName="awd_award" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_communication">
+            <EntityTypeMapping TypeName="CVSiteWithAspModel.tbl_communication">
+              <MappingFragment StoreEntitySet="tbl_communication">
+                <ScalarProperty Name="cmt_id" ColumnName="cmt_id" />
+                <ScalarProperty Name="cmt_nameSurname" ColumnName="cmt_nameSurname" />
+                <ScalarProperty Name="cmt_email" ColumnName="cmt_email" />
+                <ScalarProperty Name="cmt_subject" ColumnName="cmt_subject" />
+                <ScalarProperty Name="cmt_message" ColumnName="cmt_message" />
+                <ScalarProperty Name="cmt_date" ColumnName="cmt_date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_education">
+            <EntityTypeMapping TypeName="CVSiteWithAspModel.tbl_education">
+              <MappingFragment StoreEntitySet="tbl_education">
+                <ScalarProperty Name="edc_id" ColumnName="edc_id" />
+                <ScalarProperty Name="edc_title" ColumnName="edc_title" />
+                <ScalarProperty Name="edc_subtitle" ColumnName="edc_subtitle" />
+                <ScalarProperty Name="edc_description" ColumnName="edc_description" />
+                <ScalarProperty Name="edc_note" ColumnName="edc_note" />
+                <ScalarProperty Name="edc_date" ColumnName="edc_date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_experience">
+            <EntityTypeMapping TypeName="CVSiteWithAspModel.tbl_experience">
+              <MappingFragment StoreEntitySet="tbl_experience">
+                <ScalarProperty Name="exp_id" ColumnName="exp_id" />
+                <ScalarProperty Name="exp_title" ColumnName="exp_title" />
+                <ScalarProperty Name="exp_subtitle" ColumnName="exp_subtitle" />
+                <ScalarProperty Name="exp_description" ColumnName="exp_description" />
+                <ScalarProperty Name="exp_date" ColumnName="exp_date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_interest">
+            <EntityTypeMapping TypeName="CVSiteWithAspModel.tbl_interest">
+              <MappingFragment StoreEntitySet="tbl_interest">
+                <ScalarProperty Name="int_id" ColumnName="int_id" />
+                <ScalarProperty Name="int_interest" ColumnName="int_interest" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_skills">
+            <EntityTypeMapping TypeName="CVSiteWithAspModel.tbl_skills">
+              <MappingFragment StoreEntitySet="tbl_skills">
+                <ScalarProperty Name="skl_id" ColumnName="skl_id" />
+                <ScalarProperty Name="skl_skills" ColumnName="skl_skills" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
