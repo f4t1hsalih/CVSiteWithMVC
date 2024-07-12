@@ -29,5 +29,13 @@ namespace CVSiteWithMVC.Controllers
                 return PartialView("Experience", experience);
             }
         }
+        public PartialViewResult Education()
+        {
+            using (CVSiteWithMVCEntities db = new CVSiteWithMVCEntities())
+            {
+                var education = db.tbl_education.ToList();
+                return PartialView("Education", education);
+            }
+        }
     }
 }

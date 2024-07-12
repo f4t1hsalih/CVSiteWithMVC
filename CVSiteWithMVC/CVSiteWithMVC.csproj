@@ -1713,6 +1713,7 @@
     <Content Include="Template\vendor\jquery\jquery.slim.min.map" />
     <Content Include="Views\Default\Experience.cshtml" />
     <Content Include="Views\Default\About.cshtml" />
+    <Content Include="Views\Default\Education.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
