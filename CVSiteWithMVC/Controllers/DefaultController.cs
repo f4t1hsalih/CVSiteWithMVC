@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using CVSiteWithMVC.Models.Entity;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace CVSiteWithMVC.Controllers
@@ -11,7 +9,12 @@ namespace CVSiteWithMVC.Controllers
         // GET: Default
         public ActionResult Index()
         {
-            return View();
+            using (CVSiteWithMVCEntities db = new CVSiteWithMVCEntities())
+            {
+                var values = db.tbl_about.ToList();
+                return View(values);
+            }
+
         }
     }
 }
