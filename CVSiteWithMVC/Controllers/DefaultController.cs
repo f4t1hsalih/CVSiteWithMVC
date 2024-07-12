@@ -14,7 +14,10 @@ namespace CVSiteWithMVC.Controllers
                 var values = db.tbl_about.ToList();
                 return View(values);
             }
-
+        }
+        public PartialViewResult Experience()
+        {
+            return PartialView();
         }
     }
 }
