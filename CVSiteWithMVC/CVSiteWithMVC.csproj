@@ -1717,6 +1717,7 @@
     <Content Include="Views\Default\Skill.cshtml" />
     <Content Include="Views\Default\Interest.cshtml" />
     <Content Include="Views\Default\Award.cshtml" />
+    <Content Include="Views\Default\Communication.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

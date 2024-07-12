@@ -61,5 +61,13 @@ namespace CVSiteWithMVC.Controllers
                 return PartialView("Award", award);
             }
         }
+        public PartialViewResult Communication()
+        {
+            using (CVSiteWithMVCEntities db = new CVSiteWithMVCEntities())
+            {
+                var communication = db.tbl_communication.ToList();
+                return PartialView("Communication", communication);
+            }
+        }
     }
 }
