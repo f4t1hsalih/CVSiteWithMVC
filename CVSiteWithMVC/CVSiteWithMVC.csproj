@@ -1715,6 +1715,7 @@
     <Content Include="Views\Default\About.cshtml" />
     <Content Include="Views\Default\Education.cshtml" />
     <Content Include="Views\Default\Skill.cshtml" />
+    <Content Include="Views\Default\Interest.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
