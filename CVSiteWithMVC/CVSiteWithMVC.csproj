@@ -130,6 +130,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\ExperienceController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -3817,6 +3818,7 @@
     <Content Include="Template\AdminLTE-3.0.4\plugins\toastr\toastr.js.map" />
     <Content Include="Template\AdminLTE-3.0.4\README.md" />
     <Content Include="Views\About\Index.cshtml" />
+    <Content Include="Views\Experience\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,37 @@
+﻿@model List<CVSiteWithMVC.Models.Entity.tbl_experience>
+@{
+    ViewBag.Title = "Deneyimler";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Deneyim Listesi</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Başlık</th>
+            <th>Alt Başlık</th>
+            <th>Açıklama</th>
+            <th>Tarih</th>
+            <th>Güncelle</th>
+            <th>Sil</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.exp_id</td>
+                <td>@item.exp_title</td>
+                <td>@item.exp_subtitle</td>
+                <td>@item.exp_description</td>
+                <td>@item.exp_date</td>
+                <td><a href="#" class="btn btn-warning">Güncelle</a> </td>
+                <td><a href="#" class="btn btn-danger">Sil</a> </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="#" class="btn btn-primary">Yeni Deneyim Ekle</a>
