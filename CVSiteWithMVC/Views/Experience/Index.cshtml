@@ -14,7 +14,7 @@
             <th>Alt Başlık</th>
             <th>Açıklama</th>
             <th>Tarih</th>
-            <th>Güncelle</th>
+            <th>Düzenle</th>
             <th>Sil</th>
         </tr>
     </thead>
@@ -27,8 +27,8 @@
                 <td>@item.exp_subtitle</td>
                 <td>@item.exp_description</td>
                 <td>@item.exp_date</td>
-                <td><a href="#" class="btn btn-warning">Güncelle</a> </td>
-                <td><a href="#" class="btn btn-danger">Sil</a> </td>
+                <td><a href="/Experience/UpdateExperience/@item.exp_id" class="btn btn-warning">Düzenle</a> </td>
+                <td><a href="/Experience/DeleteExperience/@item.exp_id" class="btn btn-danger">Sil</a> </td>
             </tr>
         }
     </tbody>

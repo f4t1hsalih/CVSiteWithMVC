@@ -27,5 +27,11 @@ namespace CVSiteWithMVC.Controllers
             exp.Insert(p);
             return RedirectToAction("Index");
         }
+        public ActionResult DeleteExperience(int id)
+        {
+            var value = exp.GetById(id);
+            exp.Delete(value);
+            return RedirectToAction("Index");
+        }
     }
 }
