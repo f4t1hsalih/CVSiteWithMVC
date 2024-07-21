@@ -1,4 +1,4 @@
-﻿
+﻿@model CVSiteWithMVC.Models.Entity.tbl_experience
 @{
     ViewBag.Title = "Deneyim Güncelle";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -7,23 +7,24 @@
 <h2>Deneyim Güncelle</h2>
 <hr />
 
-@Html.BeginForm("UpdateExperience","Experience",method:FormMethod.Post){
-<div class="form-group mb-3">
-    <label>Başlık</label>
-    <input type="text" name="exp_title" class="form-control" required />
-</div>
-<div class="form-group mb-3">
-    <label>Alt Başlık</label>
-    <input type="text" name="exp_subtitle" class="form-control" />
-</div>
-<div class="form-group mb-3">
-    <label>Açıklama</label>
-    <textarea name="exp_description" rows="4" class="form-control"></textarea>
-</div>
-<div class="form-group mb-3">
-    <label>Tarih</label>
-    <input type="date" name="exp_date" class="form-control" />
-</div>
-<button class="btn btn-success font-weight-bold">Güncelle</button>
+@using (Html.BeginForm("UpdateExperience", "Experience", FormMethod.Post))
+{
+    @Html.HiddenFor(x => x.exp_id)
+    <div class="form-group mb-3">
+        @Html.LabelFor(x => x.exp_title, "Deneyim Başlık")
+        @Html.TextBoxFor(x => x.exp_title, new { @class = "form-control", required = "required" })
+    </div>
+    <div class="form-group mb-3">
+        @Html.Label("Alt Başlık")
+        @Html.TextBoxFor(x=>x.exp_subtitle, null, new { @class = "form-control" })
+    </div>
+    <div class="form-group mb-3">
+        @Html.Label("Açıklama")
+        @Html.TextAreaFor(x => x.exp_description, new { @class = "form-control", rows = 4 })
+    </div>
+    <div class="form-group mb-3">
+        @Html.Label("Tarih")
+        @Html.TextBoxFor(x => x.exp_date, null, new { @class = "form-control" })
+    </div>
+    <button class="btn btn-success font-weight-bold">Güncelle</button>
 }
-
