@@ -27,5 +27,13 @@ namespace CVSiteWithMVC.Controllers
             _skillsRepository.TInsert(skill);
             return RedirectToAction("Index");
         }
+
+        //DeleteSkill
+        public ActionResult DeleteSkill(int id)
+        {
+            var skill = _skillsRepository.TFind(x => x.skl_id == id);
+            _skillsRepository.TDelete(skill);
+            return RedirectToAction("Index");
+        }
     }
 }
