@@ -16,5 +16,6 @@ namespace CVSiteWithMVC.Models.Entity
     {
         public short skl_id { get; set; }
         public string skl_skills { get; set; }
+        public Nullable<byte> skl_rate { get; set; }
     }
 }

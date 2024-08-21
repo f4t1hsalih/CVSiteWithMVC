@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="CVSiteWithAspModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="CVSiteWithAspModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="tbl_about">
           <Key>
             <PropertyRef Name="abt_id" />
@@ -82,6 +82,7 @@
           </Key>
           <Property Name="skl_id" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="skl_skills" Type="varchar" MaxLength="50" />
+          <Property Name="skl_rate" Type="tinyint" />
         </EntityType>
         <EntityContainer Name="CVSiteWithAspModelStoreContainer">
           <EntitySet Name="tbl_about" EntityType="Self.tbl_about" Schema="dbo" store:Type="Tables" />
@@ -93,8 +94,7 @@
           <EntitySet Name="tbl_interest" EntityType="Self.tbl_interest" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_skills" EntityType="Self.tbl_skills" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="CVSiteWithAspModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -175,6 +175,7 @@
           </Key>
           <Property Name="skl_id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="skl_skills" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="skl_rate" Type="Byte" />
         </EntityType>
         <EntityContainer Name="CVSiteWithMVCEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="tbl_about" EntityType="Self.tbl_about" />
@@ -273,6 +274,7 @@
           <EntitySetMapping Name="tbl_skills">
             <EntityTypeMapping TypeName="CVSiteWithAspModel.tbl_skills">
               <MappingFragment StoreEntitySet="tbl_skills">
+                <ScalarProperty Name="skl_rate" ColumnName="skl_rate" />
                 <ScalarProperty Name="skl_id" ColumnName="skl_id" />
                 <ScalarProperty Name="skl_skills" ColumnName="skl_skills" />
               </MappingFragment>
