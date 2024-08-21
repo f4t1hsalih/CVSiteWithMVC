@@ -35,6 +35,8 @@
                                             <th>Yetenek</th>
                                             <th>Derece</th>
                                             <th style="width: 40px">Yüzde</th>
+                                            <th>Düzenle</th>
+                                            <th>Sil</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -42,22 +44,22 @@
                                         {
                                             if (item.skl_rate >= 0 && item.skl_rate <= 50)
                                             {
-                                                bar= "progress-bar bg-danger";
+                                                bar = "progress-bar bg-danger";
                                                 rate = "badge bg-danger";
                                             }
                                             else if (item.skl_rate >= 51 && item.skl_rate <= 70)
                                             {
-                                                bar= "progress-bar bg-warning";
+                                                bar = "progress-bar bg-warning";
                                                 rate = "badge bg-warning";
                                             }
                                             else if (item.skl_rate >= 71 && item.skl_rate <= 85)
                                             {
-                                                bar= "progress-bar bg-primary";
+                                                bar = "progress-bar bg-primary";
                                                 rate = "badge bg-primary";
                                             }
                                             else if (item.skl_rate >= 86 && item.skl_rate <= 100)
                                             {
-                                                bar= "progress-bar bg-success";
+                                                bar = "progress-bar bg-success";
                                                 rate = "badge bg-success";
                                             }
                                             <tr>
@@ -69,12 +71,16 @@
                                                     </div>
                                                 </td>
                                                 <td><span class="@rate">@item.skl_rate%</span></td>
+                                                <td><a href="#" class="btn btn-warning">Düzenle</a></td>
+                                                <td><a href="#" class="btn btn-danger">Sil</a></td>
                                             </tr>
                                         }
                                     </tbody>
                                 </table>
                             </div>
-
+                        </div>
+                        <div>
+                            <a href="#" class="btn btn-info">Yeni Yetenek Ekle</a>
                         </div>
                     </div>
                 </div>
