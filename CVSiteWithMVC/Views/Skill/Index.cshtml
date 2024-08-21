@@ -6,6 +6,11 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
+@{
+    string bar = "";
+    string rate = "";
+}
+
 <h2>Yetenek Listesi</h2>
 <hr />
 
@@ -35,16 +40,36 @@
                                     <tbody>
                                         @foreach (var item in Model)
                                         {
-                                        <tr>
-                                            <td>@item.skl_id</td>
-                                            <td>@item.skl_skills</td>
-                                            <td>
-                                                <div class="progress progress-xs">
-                                                    <div class="progress-bar progress-bar-danger" style="width: @item.skl_rate%"></div>
-                                                </div>
-                                            </td>
-                                            <td><span class="badge bg-danger">@item.skl_rate%</span></td>
-                                        </tr>
+                                            if (item.skl_rate >= 0 && item.skl_rate <= 50)
+                                            {
+                                                bar= "progress-bar bg-danger";
+                                                rate = "badge bg-danger";
+                                            }
+                                            else if (item.skl_rate >= 51 && item.skl_rate <= 70)
+                                            {
+                                                bar= "progress-bar bg-warning";
+                                                rate = "badge bg-warning";
+                                            }
+                                            else if (item.skl_rate >= 71 && item.skl_rate <= 85)
+                                            {
+                                                bar= "progress-bar bg-primary";
+                                                rate = "badge bg-primary";
+                                            }
+                                            else if (item.skl_rate >= 86 && item.skl_rate <= 100)
+                                            {
+                                                bar= "progress-bar bg-success";
+                                                rate = "badge bg-success";
+                                            }
+                                            <tr>
+                                                <td>@item.skl_id</td>
+                                                <td>@item.skl_skills</td>
+                                                <td>
+                                                    <div class="progress progress-xs">
+                                                        <div class="@bar" style="width: @item.skl_rate%"></div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="@rate">@item.skl_rate%</span></td>
+                                            </tr>
                                         }
                                     </tbody>
                                 </table>
