@@ -1,0 +1,23 @@
+﻿@model CVSiteWithMVC.Models.Entity.tbl_skills
+
+@{
+    ViewBag.Title = "Yetenek Ekle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Yeni Yetenek</h2>
+<hr />
+
+@using (Html.BeginForm("AddSkill", "Skill", FormMethod.Post))
+{
+    @Html.HiddenFor(x => x.skl_id)
+    <div class="form-group mb-3">
+        @Html.LabelFor(x => x.skl_skills, "Yetenek Adı")
+        @Html.TextBoxFor(x => x.skl_skills, new { @class = "form-control", required = "required" })
+    </div>
+    <div class="form-group mb-3">
+        @Html.LabelFor(x => x.skl_rate, "Yetenek Derecesi")
+        @Html.TextBoxFor(x => x.skl_rate, new { @class = "form-control", required = "required" })
+    </div>
+    <button class="btn btn-success font-weight-bold">Kaydet</button>
+}
