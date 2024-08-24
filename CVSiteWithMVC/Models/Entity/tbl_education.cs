@@ -16,11 +16,26 @@ namespace CVSiteWithMVC.Models.Entity
     public partial class tbl_education
     {
         public short edc_id { get; set; }
+
         [Required(ErrorMessage ="Bu alaný boþ geçemezsiniz!")]
+        [StringLength(50, ErrorMessage = "En fazla 50 karakter girebilirsiniz!")]
         public string edc_title { get; set; }
+
+        [Required(ErrorMessage = "Bu alaný boþ geçemezsiniz!")]
+        [StringLength(300, ErrorMessage = "En fazla 300 karakter girebilirsiniz!")]
         public string edc_subtitle { get; set; }
+
+        [Required(ErrorMessage = "Bu alaný boþ geçemezsiniz!")]
+        [StringLength(300, ErrorMessage = "En fazla 300 karakter girebilirsiniz!")]
         public string edc_description { get; set; }
+
+        [Required(ErrorMessage = "Bu alaný boþ geçemezsiniz!")]
+        [StringLength(10, ErrorMessage = "En fazla 10 karakter girebilirsiniz!")]
         public string edc_note { get; set; }
+
+        [Required(ErrorMessage = "Bu alaný boþ geçemezsiniz!")]
+        [StringLength(50, ErrorMessage = "En fazla 50 karakter girebilirsiniz!")]
         public string edc_date { get; set; }
+
     }
 }
