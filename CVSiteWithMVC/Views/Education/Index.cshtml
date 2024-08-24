@@ -1,0 +1,40 @@
+﻿@model List<CVSiteWithMVC.Models.Entity.tbl_education>
+
+
+@{
+    ViewBag.Title = "Eğitim Bilgileri";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Eğitim Bilgileri</h2>
+<hr />
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Başlık</th>
+            <th>Alt Başlık</th>
+            <th>Not</th>
+            <th>Tarih</th>
+            <th>Düzenle</th>
+            <th>Sil</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.edc_id</td>
+                <td>@item.edc_title</td>
+                <td>@item.edc_subtitle</td>
+                <td>@item.edc_note</td>
+                <td>@item.edc_date</td>
+                <td><a href="/Education/EditEducation/@item.edc_id" class="btn btn-warning">Düzenle</a> </td>
+                <td><a href="/Education/DeleteEducation/@item.edc_id" class="btn btn-danger">Sil</a> </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="/Education/AddEducation" class="btn btn-primary">Yeni Eğitim Bilgisi Ekle</a>
