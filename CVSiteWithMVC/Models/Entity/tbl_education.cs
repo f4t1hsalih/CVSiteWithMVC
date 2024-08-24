@@ -11,10 +11,12 @@ namespace CVSiteWithMVC.Models.Entity
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class tbl_education
     {
         public short edc_id { get; set; }
+        [Required(ErrorMessage ="Bu alaný boþ geçemezsiniz!")]
         public string edc_title { get; set; }
         public string edc_subtitle { get; set; }
         public string edc_description { get; set; }

@@ -22,11 +22,16 @@ namespace CVSiteWithMVC.Controllers
         {
             return View();
         }
+
         [HttpPost]
         public ActionResult AddEducation(tbl_education p)
         {
-            educationRepo.TInsert(p);
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                educationRepo.TInsert(p);
+                return RedirectToAction("Index");
+            }
+            return View(p);
         }
 
     }
