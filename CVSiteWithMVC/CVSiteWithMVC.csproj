@@ -3828,6 +3828,7 @@
     <Content Include="Views\Skill\EditSkill.cshtml" />
     <Content Include="Views\Education\Index.cshtml" />
     <Content Include="Views\Education\AddEducation.cshtml" />
+    <Content Include="Views\Education\EditEducation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

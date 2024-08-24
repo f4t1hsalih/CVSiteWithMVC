@@ -15,6 +15,7 @@ namespace CVSiteWithMVC.Models.Entity
 
     public partial class tbl_education
     {
+        [Key]
         public short edc_id { get; set; }
 
         [Required(ErrorMessage ="Bu alaný boþ geçemezsiniz!")]
