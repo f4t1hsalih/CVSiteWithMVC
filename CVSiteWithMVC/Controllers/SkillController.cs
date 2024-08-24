@@ -21,19 +21,60 @@ namespace CVSiteWithMVC.Controllers
         {
             return View();
         }
+
         [HttpPost]
         public ActionResult AddSkill(tbl_skills skill)
         {
-            _skillsRepository.TInsert(skill);
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                _skillsRepository.TInsert(skill);
+                return RedirectToAction("Index");
+            }
+            return View(skill);
         }
 
-        //DeleteSkill
+        // DeleteSkill
         public ActionResult DeleteSkill(int id)
         {
             var skill = _skillsRepository.TFind(x => x.skl_id == id);
+            if (skill == null)
+            {
+                return HttpNotFound();
+            }
             _skillsRepository.TDelete(skill);
             return RedirectToAction("Index");
+        }
+
+        // EditSkill
+        [HttpGet]
+        public ActionResult EditSkill(int id)
+        {
+            var skill = _skillsRepository.TFind(x => x.skl_id == id);
+            if (skill == null)
+            {
+                return HttpNotFound();
+            }
+            return View(skill);
+        }
+
+        [HttpPost]
+        public ActionResult EditSkill(tbl_skills skill)
+        {
+            if (ModelState.IsValid)
+            {
+                var existingSkill = _skillsRepository.TFind(x => x.skl_id == skill.skl_id);
+                if (existingSkill == null)
+                {
+                    return HttpNotFound();
+                }
+
+                existingSkill.skl_skills = skill.skl_skills;
+                existingSkill.skl_rate = skill.skl_rate;
+                _skillsRepository.TUpdate(existingSkill);
+
+                return RedirectToAction("Index");
+            }
+            return View(skill);
         }
     }
 }
