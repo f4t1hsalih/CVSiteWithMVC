@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using CVSiteWithMVC.Models.Entity;
 using CVSiteWithMVC.Repositories;
-using CVSiteWithMVC.Models.Entity;
+using System.Web.Mvc;
 
 namespace CVSiteWithMVC.Controllers
 {
@@ -19,5 +15,23 @@ namespace CVSiteWithMVC.Controllers
             var awards = awardRepo.TGetListAll();
             return View(awards);
         }
+
+        // GET: EditAward
+        [HttpGet]
+        public ActionResult EditAward(int id)
+        {
+            var award = awardRepo.TFind(x => x.awd_id == id);
+            return View(award);
+        }
+        [HttpPost]
+        public ActionResult EditAward(tbl_award award)
+        {
+            var value = awardRepo.TGetById(award.awd_id);
+            value.awd_award = award.awd_award;
+            value.awd_date = award.awd_date;
+            awardRepo.TUpdate(value);
+            return RedirectToAction("Index");
+        }
+
     }
 }
