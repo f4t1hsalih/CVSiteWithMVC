@@ -1,4 +1,6 @@
-﻿@{
+﻿@model List<CVSiteWithMVC.Models.Entity.tbl_award>
+
+@{
     ViewBag.Title = "Başarılar";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
@@ -14,21 +16,21 @@
                     <div class="card-body">
                         <div class="tab-content">
                             <div class="timeline timeline-inverse">
-                                <div class="time-label">
-                                    <span class="bg-danger">10 Şub. 2014</span>
-                                </div>
+                                @foreach (var item in Model)
+                                {
                                 <div>
                                     <i class="fas fa-envelope bg-primary"></i>
                                     <div class="timeline-item">
-                                        <div class="timeline-body">
-                                            Burası Açıklama Alanı...
-                                        </div>
-                                        <div class="timeline-footer">
+                                        <span class="time"><i class="far fa-clock"></i> @item.awd_date</span>
+                                        <h3 class="timeline-header"><a href="#">@item.awd_award</a></h3>
+                                        @*<div class="timeline-body">@item.awd_award</div>*@
+                                        @*<div class="timeline-footer">
                                             <a href="#" class="btn btn-primary btn-sm">Düzenle</a>
                                             <a href="#" class="btn btn-danger btn-sm">Sil</a>
-                                        </div>
+                                        </div>*@
                                     </div>
                                 </div>
+                                }
                             </div> 
                         </div> 
                     </div> 
