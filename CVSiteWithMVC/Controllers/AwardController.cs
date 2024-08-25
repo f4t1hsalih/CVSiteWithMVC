@@ -46,5 +46,12 @@ namespace CVSiteWithMVC.Controllers
             return RedirectToAction("Index");
         }
 
+        // GET: DeleteAward
+        public ActionResult DeleteAward(int id)
+        {
+            awardRepo.TDelete(awardRepo.TFind(x => x.awd_id == id));
+            return RedirectToAction("Index");
+        }
+
     }
 }
