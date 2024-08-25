@@ -16,5 +16,6 @@ namespace CVSiteWithMVC.Models.Entity
     {
         public short awd_id { get; set; }
         public string awd_award { get; set; }
+        public string awd_date { get; set; }
     }
 }
