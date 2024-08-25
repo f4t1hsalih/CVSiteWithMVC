@@ -1,14 +1,14 @@
 ﻿@model CVSiteWithMVC.Models.Entity.tbl_award
 
 @{
-    ViewBag.Title = "Ödül Düzenle";
+    ViewBag.Title = "Yeni Başarım Kaydı";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Ödül Düzenle</h2>
+<h2>Yeni Başarım Kaydı</h2>
 <hr />
 
-@using (Html.BeginForm("EditAward", "Award", FormMethod.Post))
+@using (Html.BeginForm("AddAward", "Award", FormMethod.Post))
 {
     @Html.HiddenFor(x => x.awd_id)
     <div class="form-group mb-3">
@@ -19,5 +19,5 @@
         @Html.LabelFor(x => x.awd_date, "Tarih")
         @Html.TextBoxFor(x => x.awd_date, new { @class = "form-control", required = "required" })
     </div>
-    <button class="btn btn-primary font-weight-bold">Güncelle</button>
+    <button class="btn btn-success font-weight-bold">Kaydet</button>
 }

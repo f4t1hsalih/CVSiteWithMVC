@@ -12,30 +12,33 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
+                <a href="/Award/AddAward/" class="btn btn-primary">Yeni Başarım Girişi</a>
+                <br />
+                <br />
                 <div class="card">
                     <div class="card-body">
                         <div class="tab-content">
                             <div class="timeline timeline-inverse">
                                 @foreach (var item in Model)
                                 {
-                                <div>
-                                    <i class="fas fa-envelope bg-primary"></i>
-                                    <div class="timeline-item">
-                                        <span class="time"><i class="far fa-clock"></i> @item.awd_date</span>
-                                        <h3 class="timeline-header"><a href="/Award/EditAward/@item.awd_id">@item.awd_award</a></h3>
-                                        @*<div class="timeline-body">@item.awd_award</div>
-                                        <div class="timeline-footer">
-                                            <a href="#" class="btn btn-primary btn-sm">Düzenle</a>
-                                            <a href="#" class="btn btn-danger btn-sm">Sil</a>
-                                        </div>*@
+                                    <div>
+                                        <i class="fas fa-envelope bg-primary"></i>
+                                        <div class="timeline-item">
+                                            <span class="time"><i class="far fa-clock"></i> @item.awd_date</span>
+                                            <h3 class="timeline-header"><a href="/Award/EditAward/@item.awd_id">@item.awd_award</a></h3>
+                                            @*<div class="timeline-body">@item.awd_award</div>
+                                                <div class="timeline-footer">
+                                                    <a href="#" class="btn btn-primary btn-sm">Düzenle</a>
+                                                    <a href="#" class="btn btn-danger btn-sm">Sil</a>
+                                                </div>*@
+                                        </div>
                                     </div>
-                                </div>
                                 }
-                            </div> 
-                        </div> 
-                    </div> 
-                </div> 
-            </div> 
-        </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>

@@ -33,5 +33,18 @@ namespace CVSiteWithMVC.Controllers
             return RedirectToAction("Index");
         }
 
+        // GET: AddAward
+        [HttpGet]
+        public ActionResult AddAward()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult AddAward(tbl_award award)
+        {
+            awardRepo.TInsert(award);
+            return RedirectToAction("Index");
+        }
+
     }
 }

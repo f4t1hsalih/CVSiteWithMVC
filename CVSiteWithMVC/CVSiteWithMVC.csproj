@@ -3832,6 +3832,7 @@
     <Content Include="Views\Education\EditEducation.cshtml" />
     <Content Include="Views\Award\Index.cshtml" />
     <Content Include="Views\Award\EditAward.cshtml" />
+    <Content Include="Views\Award\AddAward.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
