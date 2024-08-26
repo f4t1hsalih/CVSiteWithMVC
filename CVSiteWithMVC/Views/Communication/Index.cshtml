@@ -1,0 +1,43 @@
+﻿@model List<CVSiteWithMVC.Models.Entity.tbl_communication>
+
+@{
+    ViewBag.Title = "İletişim";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>İletişim</h2>
+<hr />
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="timeline timeline-inverse">
+                            @foreach (var item in Model)
+                            {
+                                <div class="time-label">
+                                    <span class="bg-danger">@(((DateTime)item.cmt_date).ToString("dd-MMM-yyyy"))</span>
+                                </div>
+                                <div>
+                                    <i class="fas fa-comments bg-warning"></i>
+                                    <div class="timeline-item">
+                                        <span class="time"><i class="far fa-clock"></i> @item.cmt_email</span>
+                                        <h3 class="timeline-header">
+                                            <a href="#">@item.cmt_nameSurname</a> @item.cmt_subject
+                                        </h3>
+                                        <div class="timeline-body">@item.cmt_message</div>
+                                        @*<div class="timeline-footer">
+                                                <a href="#" class="btn btn-warning btn-flat btn-sm">Mesajı Görüntüle</a>
+                                            </div>*@
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
