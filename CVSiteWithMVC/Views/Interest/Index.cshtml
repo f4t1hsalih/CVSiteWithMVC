@@ -1,0 +1,19 @@
+﻿@using CVSiteWithMVC.Models.Entity
+@model List<tbl_interest>
+
+
+@{
+    ViewBag.Title = "Hobiler";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Hobiler</h2>
+<hr />
+
+@foreach (var item in Model)
+{
+    <label>Açıklama</label>
+<textarea rows="10" class="form-control">@item.int_interest</textarea>
+}
+<br />
+<button class="btn btn-dark">Güncelle</button>

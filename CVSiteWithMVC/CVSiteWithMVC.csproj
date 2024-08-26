@@ -134,6 +134,7 @@
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\EducationController.cs" />
     <Compile Include="Controllers\ExperienceController.cs" />
+    <Compile Include="Controllers\InterestController.cs" />
     <Compile Include="Controllers\SkillController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -3835,6 +3836,7 @@
     <Content Include="Views\Award\EditAward.cshtml" />
     <Content Include="Views\Award\AddAward.cshtml" />
     <Content Include="Views\Communication\Index.cshtml" />
+    <Content Include="Views\Interest\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
