@@ -4,7 +4,6 @@ using System.Web.Mvc;
 
 namespace CVSiteWithMVC.Controllers
 {
-    [Authorize]
     public class ExperienceController : Controller
     {
         ExperienceRepository exp = new ExperienceRepository();

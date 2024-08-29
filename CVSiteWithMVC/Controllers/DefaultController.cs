@@ -4,6 +4,7 @@ using System.Web.Mvc;
 
 namespace CVSiteWithMVC.Controllers
 {
+    [AllowAnonymous]
     public class DefaultController : Controller
     {
         // GET: Default

@@ -5,6 +5,7 @@ using System.Web.Security;
 
 namespace CVSiteWithMVC.Controllers
 {
+    [AllowAnonymous]
     public class LogInController : Controller
     {
         // GET: LogIn
