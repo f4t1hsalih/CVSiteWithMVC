@@ -12,6 +12,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="~/Template/AdminLTE-3.0.4/dist/css/adminlte.min.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content-wrapper {
+            flex: 1;
+            margin-bottom: 0;
+            padding-bottom: 0;
+            min-height: calc(100vh - 56px);
+        }
+
+        form {
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .btn {
+            margin-bottom: 0;
+        }
+    </style>
 </head>
 <body class="hold-transition sidebar-mini">
     <div class="wrapper">
@@ -25,7 +54,7 @@
                         <img src="~/Template/img/prof.jpg" class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block">H.Salih Doğan</a>
+                        <a href="/About/Index/" class="d-block">H.Salih Doğan</a>
                     </div>
                 </div>
                 <nav class="mt-2">
@@ -73,14 +102,12 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/LogOut/Exit/" class="nav-link">
+                            <a href="/LogIn/Exit/" class="nav-link">
                                 <i class="nav-icon fas fa-sign-out-alt text-danger fa-lg"></i>
                                 <p>Çıkış</p>
                             </a>
                         </li>
                     </ul>
-
-
                 </nav>
             </div>
         </aside>

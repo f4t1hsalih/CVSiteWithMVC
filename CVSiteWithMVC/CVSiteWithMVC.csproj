@@ -3503,8 +3503,6 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Views\Default\Index.cshtml" />
     <Content Include="Template\.travis.yml" />
@@ -3954,6 +3952,7 @@
     <Content Include="Template\Login-Form\scss\bootstrap\_variables.scss" />
     <Content Include="Template\Login-Form\scss\style.scss" />
     <Content Include="Views\LogIn\Index.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

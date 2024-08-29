@@ -31,5 +31,12 @@ namespace CVSiteWithMVC.Controllers
             }
         }
 
+        public ActionResult Exit()
+        {
+            FormsAuthentication.SignOut();
+            Session.Abandon();
+            return RedirectToAction("Index","LogIn");
+        }
+
     }
 }
