@@ -25,20 +25,25 @@
             flex-direction: column;
         }
 
+        .main-sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 100%;
+            z-index: 810;
+        }
+
         .content-wrapper {
             flex: 1;
-            margin-bottom: 0;
-            padding-bottom: 0;
+            margin-left: 250px;
+            padding: 20px;
             min-height: calc(100vh - 56px);
         }
 
-        form {
+        form, .btn {
             margin-bottom: 0;
             padding-bottom: 0;
-        }
-
-        .btn {
-            margin-bottom: 0;
         }
     </style>
 </head>
