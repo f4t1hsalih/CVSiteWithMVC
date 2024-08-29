@@ -24,7 +24,12 @@
             <tr>
                 <td>@item.adm_id</td>
                 <td>@item.adm_username</td>
-                <td>@item.adm_password</td>
+                <td>
+                    @{
+                        string stars = new string('*', item.adm_password.Length);
+                    }
+                    @stars
+                </td>
                 <td><a href="/Admin/EditAdmin/@item.adm_id" class="btn btn-warning">Düzenle</a> </td>
                 <td><a href="/Admin/DeleteAdmin/@item.adm_id" class="btn btn-danger">Sil</a> </td>
             </tr>
