@@ -1,0 +1,35 @@
+﻿@model List<CVSiteWithMVC.Models.Entity.tbl_admin>
+
+@{
+    ViewBag.Title = "Admin Bilgileri";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Admin Bilgileri</h2>
+<hr />
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Kullanıcı Adı</th>
+            <th>Şifre</th>
+            <th>Düzenle</th>
+            <th>Sil</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.adm_id</td>
+                <td>@item.adm_username</td>
+                <td>@item.adm_password</td>
+                <td><a href="/Admin/EditAdmin/@item.adm_id" class="btn btn-warning">Düzenle</a> </td>
+                <td><a href="/Admin/DeleteAdmin/@item.adm_id" class="btn btn-danger">Sil</a> </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="/Admin/AddAdmin" class="btn btn-primary">Yeni Admin Ekle</a>

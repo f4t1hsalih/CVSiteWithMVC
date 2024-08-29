@@ -1,0 +1,25 @@
+﻿@model CVSiteWithMVC.Models.Entity.tbl_admin
+
+@{
+    ViewBag.Title = "Admin Ekle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Admin Ekle</h2>
+<hr />
+
+@using (Html.BeginForm("AddAdmin", "Admin", FormMethod.Post))
+{
+    @Html.HiddenFor(x => x.adm_id)
+    <div class="form-group mb-3">
+        @Html.LabelFor(x => x.adm_username, "Kullanıcı Adı")
+        @Html.TextBoxFor(x => x.adm_username, new { @class = "form-control", required="required"})
+        @Html.ValidationMessageFor(x => x.adm_username, "", new { @style = "color:red" })
+    </div>
+    <div class="form-group mb-3">
+        @Html.LabelFor(x => x.adm_password, "Şifre")
+        @Html.TextBoxFor(x => x.adm_password, new { @class = "form-control", required = "required" })
+        @Html.ValidationMessageFor(x => x.adm_password, "", new { @style = "color:red" })
+    </div>
+    <button class="btn btn-success font-weight-bold">Kaydet</button>
+}

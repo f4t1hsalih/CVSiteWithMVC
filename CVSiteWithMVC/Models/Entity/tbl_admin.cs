@@ -11,11 +11,16 @@ namespace CVSiteWithMVC.Models.Entity
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class tbl_admin
     {
         public byte adm_id { get; set; }
+        [Required]
+        [StringLength(30,ErrorMessage ="Kullanýcý Adý Maximum 30 karekter Olabilir!")]
         public string adm_username { get; set; }
+        [Required]
+        [StringLength(30, ErrorMessage = "Þifre Maximum 20 karekter Olabilir!")]
         public string adm_password { get; set; }
     }
 }
