@@ -4,6 +4,7 @@ using System.Web.Mvc;
 
 namespace CVSiteWithMVC.Controllers
 {
+    [Authorize]
     public class InterestController : Controller
     {
         GenericRepository<tbl_interest> repo = new GenericRepository<tbl_interest>();

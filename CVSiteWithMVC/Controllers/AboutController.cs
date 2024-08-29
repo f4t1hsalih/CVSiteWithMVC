@@ -4,9 +4,11 @@ using CVSiteWithMVC.Repositories;
 
 namespace CVSiteWithMVC.Controllers
 {
+    [Authorize]
     public class AboutController : Controller
     {
         GenericRepository<tbl_about> repo = new GenericRepository<tbl_about>();
+        
         // GET: About
         [HttpGet]
         public ActionResult Index()

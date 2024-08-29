@@ -1,13 +1,12 @@
 ﻿using CVSiteWithMVC.Models.Entity;
 using CVSiteWithMVC.Repositories;
-using System.Linq;
 using System.Web.Mvc;
 
 namespace CVSiteWithMVC.Controllers
 {
+    [Authorize]
     public class EducationController : Controller
     {
-
         GenericRepository<tbl_education> educationRepo = new GenericRepository<tbl_education>();
 
         // GET: Education

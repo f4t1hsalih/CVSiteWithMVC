@@ -4,9 +4,9 @@ using System.Web.Mvc;
 
 namespace CVSiteWithMVC.Controllers
 {
+    [Authorize]
     public class AwardController : Controller
     {
-
         GenericRepository<tbl_award> awardRepo = new GenericRepository<tbl_award>();
 
         // GET: Award

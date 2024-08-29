@@ -4,6 +4,7 @@ using System.Web.Mvc;
 
 namespace CVSiteWithMVC.Controllers
 {
+    [Authorize]
     public class SkillController : Controller
     {
         GenericRepository<tbl_skills> _skillsRepository = new GenericRepository<tbl_skills>();
