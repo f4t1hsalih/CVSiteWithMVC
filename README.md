@@ -21,7 +21,7 @@ Bu proje, hem yöneticiler hem de kullanıcılar için işlevsel, verimli ve est
 ## Proje Resimleri
 Aşağıda projeye ait bazı ekran görüntüleri bulunmaktadır:
 
-![Ekran Görüntüsü 1](CVSiteWithMVC/ProjectPictures/Ekran_görüntüsü_2024-08-29_175243.png)
+![Ekran Görüntüsü 1](CVSiteWithMVC/ProjectPictures/pic1.png)
 ![Ekran Görüntüsü 2](resim2-url)
 ![Ekran Görüntüsü 3](resim3-url)
 ![Ekran Görüntüsü 4](resim1-url)
