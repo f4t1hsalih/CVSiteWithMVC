@@ -22,10 +22,10 @@ Bu proje, hem yöneticiler hem de kullanıcılar için işlevsel, verimli ve est
 Aşağıda projeye ait bazı ekran görüntüleri bulunmaktadır:
 
 ![Ekran Görüntüsü 1](CVSiteWithMVC/ProjectPictures/pic1.png)
-![Ekran Görüntüsü 2](resim2-url)
-![Ekran Görüntüsü 3](resim3-url)
-![Ekran Görüntüsü 4](resim1-url)
-![Ekran Görüntüsü 5](resim2-url)
-![Ekran Görüntüsü 6](resim3-url)
-![Ekran Görüntüsü 7](resim1-url)
-![Ekran Görüntüsü 8](resim2-url)
+![Ekran Görüntüsü 2](CVSiteWithMVC/ProjectPictures/pic2.png)
+![Ekran Görüntüsü 3](CVSiteWithMVC/ProjectPictures/pic3.png)
+![Ekran Görüntüsü 4](CVSiteWithMVC/ProjectPictures/pic4.png)
+![Ekran Görüntüsü 5](CVSiteWithMVC/ProjectPictures/pic5.png)
+![Ekran Görüntüsü 6](CVSiteWithMVC/ProjectPictures/pic6.png)
+![Ekran Görüntüsü 7](CVSiteWithMVC/ProjectPictures/pic7.png)
+![Ekran Görüntüsü 8](CVSiteWithMVC/ProjectPictures/pic8.png)
